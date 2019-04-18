@@ -1,0 +1,30 @@
+# Tema2_POO / Unguru Dragos-Gabriel 325CD
+
+	The purpose of this project is to implement
+some basic functionalities of the bash commands
+and a version control system.
+
+	Using the same approach for both the filesystem
+commands and the VCS commands.
+
+	We'll store the filesystem format in vcs.activeSnapshot
+which is updated for every other command. Using this, we can
+manage the filesystem for every other commit.
+
+	The active VCS has:
+		-> a list of branches
+		-> the active snapshot of the filesystem
+		-> the branch we're working on
+		-> the output writer, which manages the output
+
+	Every branch is made of:
+		-> a name
+		-> a list of commits
+		-> the staging (uncommited/unrolled filesystem	)
+					   (		modifications			)
+
+	And every commit has:
+		-> an ID
+		-> a tag/comment (commit arguments after -m)
+		-> the snapshot of the filesystem at the moment
+		   of the commit
